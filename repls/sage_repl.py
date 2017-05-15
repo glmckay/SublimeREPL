@@ -4,8 +4,9 @@ from . import subprocess_repl
 class SageRepl(subprocess_repl.SubprocessRepl):
     TYPE = "sage"
 
-    def __init(self, encoding, **kwds):
-        self.prompt_re = re.compile(b'^In \[\d+\] :$')
+    def __init__(self, encoding, **kwds):
+        self.prompt_re = re.compile(b'^In \[\d+\]: $')
+        super(SageRepl, self).__init__(encoding, **kwds)
 
     def read_bytes(self):
         bytes = super(SageRepl, self).read_bytes()

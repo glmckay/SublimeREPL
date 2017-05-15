@@ -15,11 +15,19 @@
                  "args": {
                     "type": "sage",
                     "encoding": "utf-8",
-                    "cmd": ["bash", "-c", "export PYTHONUNBUFFERED=1; sage"],
+                    "cmd": {
+                        "windows": ["bash", "-c", "export PYTHONUNBUFFERED=1; sage"],
+                        "osx": ["sage"]
+                    },
+                    "extend_env": {
+                        "windows": {},
+                        "osx": {"PYTHONUNBUFFERED": "1"}
+                    },
+                    "suppress_echo": false,
                     "cwd": "$file_path",
                     "cmd_postfix": "\n",
                     "external_id": "sage",
-                    "syntax": "Packages/Python/Python.tmLanguage"
+                    "syntax": "Packages/Sublime-Sage/Sage-Interactive.sublime-syntax"
                     }
                 }
             ]
