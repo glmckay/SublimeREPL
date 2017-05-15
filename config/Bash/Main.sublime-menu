@@ -1,0 +1,32 @@
+[
+     {
+        "id": "tools",
+        "children":
+        [{
+            "caption": "SublimeREPL",
+            "mnemonic": "R",
+            "id": "SublimeREPL",
+            "children":
+            [
+                {"command": "repl_open",
+                 "caption": "Bash",
+                 "id": "repl_bash",
+                 "mnemonic": "B",
+                 "args": {
+                    "type": "subprocess",
+                    "encoding": "utf-8",
+                    "cmd": {"windows": ["bash", "-i"],
+                            "linux": ["bash", "-i"],
+                            "osx": ["bash", "-i"]},
+                    "cwd": "$file_path",
+                    "cmd_postfix": "\n",
+                    "env": {},
+                    "suppress_echo": true,
+                    "external_id": "bash",
+                    "syntax": "Packages/Text/Plain text.tmLanguage"
+                    }
+                }
+            ]
+        }]
+    }
+]

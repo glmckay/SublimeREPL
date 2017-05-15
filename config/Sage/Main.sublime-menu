@@ -1,0 +1,28 @@
+[
+     {
+        "id": "tools",
+        "children":
+        [{
+            "caption": "SublimeREPL",
+            "mnemonic": "R",
+            "id": "SublimeREPL",
+            "children":
+            [
+                {"command": "repl_open",
+                 "caption": "Sage",
+                 "id": "repl_sage",
+                 "mnemonic": "S",
+                 "args": {
+                    "type": "sage",
+                    "encoding": "utf-8",
+                    "cmd": ["bash", "-c", "export PYTHONUNBUFFERED=1; sage"],
+                    "cwd": "$file_path",
+                    "cmd_postfix": "\n",
+                    "external_id": "sage",
+                    "syntax": "Packages/Python/Python.tmLanguage"
+                    }
+                }
+            ]
+        }]
+    }
+]
